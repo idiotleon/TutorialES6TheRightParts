@@ -12,6 +12,7 @@ var obj = {
     id: 42,
     foo: function foo() {
         setTimeout(function () {
+            // 'this' keyword does not point ot 'obj' but a global object
             console.log(this.id);
         }, 100);
     }
@@ -28,6 +29,9 @@ var obj = {
     }
 };
 
+obj.foo();  // 42
+
+
 // equivalent
 // In the arrow function, "this" keyword will automatically use the surronding scope
 var obj = {
@@ -39,6 +43,8 @@ var obj = {
         }, 100);
     }
 }
+
+obj.foo();  // 42
 
 var obj = {
     id: 42,
