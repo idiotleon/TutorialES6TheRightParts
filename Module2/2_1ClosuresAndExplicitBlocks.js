@@ -16,13 +16,16 @@ function foo(x, y) {
     }
 }
 
+/*
 function foo(x, y) {
     // 'let' block form instead of 'let' declaration form
+    // rejected by cc49
     let(x = 2) {
         // ..
         console.log(x);
     };
 }
+*/
 
 function foo(x, y) {
     if (x > y) {
