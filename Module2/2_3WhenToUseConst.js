@@ -10,4 +10,5 @@ function foo() {
         // x cannot be set to null (because of const)
         // x = null;
     });
+
 }
